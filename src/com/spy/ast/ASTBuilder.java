@@ -12,8 +12,6 @@ public class ASTBuilder {
   static boolean hadError = false;
   static boolean hadRuntimeError = false;
 
-  // private static final Interpreter interpreter = new Interpreter();
-
   public static void main(String[] args) throws IOException {
     if (args.length > 1) {
         System.out.println("Usage: rlox [script]");
@@ -59,7 +57,6 @@ public class ASTBuilder {
     if (hadError) return;
 
     System.out.println(new AstPrinter().print(expression));
-    // interpreter.interpret(statements);
   }
 
   static void error(int line, String message) {
